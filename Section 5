@@ -100,3 +100,65 @@ function buildTriangle(n){
 
 // test your code by uncommenting the following line
 console.log(buildTriangle(100));
+********************************************************************************************
+
+Directions:
+Write an anonymous function expression that stores a function in a variable called "laugh" and outputs the number of "ha"s that you pass in as an argument.
+
+laugh(3);
+Returns: hahaha!
+
+var laugh = function(l){
+  var ha = "";
+  for(x = 0; x < l; x ++){
+    ha += "ha";
+  }
+  
+  return ha + "!";
+}
+/* finish the function expression */
+
+console.log(laugh(10));
+********************************************************************************
+
+Directions:
+Write a named function expression that stores the function in a variable called cry and returns "boohoo!". 
+Don't forget to call the function using the variable name, not the function name:
+
+cry();
+Returns: boohoo!
+
+var cry = function sad() {
+    return "boohoo!";
+}
+
+console.log(cry());
+***************************************************************************************
+
+Directions:
+Call the emotions() function so that it prints the output you see below, but instead of passing the laugh() function as an argument, 
+pass an inline function expression instead.
+
+emotions("happy", laugh(2)); // you can use your laugh function from the previous quizzes
+Prints: "I am happy, haha!"
+
+/*
+ * Programming Quiz: Inline Functions (5-6)
+ */
+
+// don't change this code
+function emotions(myString, myFunc) {
+    console.log("I am " + myString + ", " + myFunc(2));
+}
+
+// your code goes here
+// call the emotions function here and pass in an
+// inline function expression
+emotions('happy', function laugh(tears) {
+    var smile = '';
+    for(var i = 0; i < tears; i++) {
+        smile += 'ha';
+    }
+    return smile + '!';
+    
+})
