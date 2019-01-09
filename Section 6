@@ -1,0 +1,50 @@
+Directions:
+Create an array called udaciFamily and add "Julia", "James", 
+and your name to the array. Then, print the udaciFamily to the console using console.log.
+
+/*
+ * Programming Quiz: UdaciFamily (6-1)
+ */
+
+// your code goes here
+udaciFamily = ["Julia", "James", "Dimitri"]
+console.log(udaciFamily)
+**********************************************************************************************************************
+
+Directions:
+Create an array called crew to organize the Serenity’s crew and set it equal to the variables below . 
+You don't need to type out the actual strings, just use the provided variables.
+
+/*
+ * Programming Quiz: Building the Crew (6-2)
+ */
+
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
+
+// your code goes here
+crew = ["Mal", "Zoe", "Wash", "Inara", "Jayne", "Kaylee"]
+console.log(crew)
+************************************************************************************************************************
+
+Directions:
+Starting with this array of prices, change the prices of the 1st, 3rd, and 7th elements in the array.
+var prices = [1.23, 48.11, 90.11, 8.50, 9.99, 1.00, 1.10, 67.00];
+
+/*
+ * Programming Quiz: The Price is Right (6-3)
+ */
+
+var prices = [1.23, 48.11, 90.11, 8.50, 9.99, 1.00, 1.10, 67.00];
+
+// your code goes here
+prices[1] = 2.99
+prices[3] = 5.99
+prices[7] = 10.00
+console.log(prices)
+************************************************************************************************************************
+
