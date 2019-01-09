@@ -48,3 +48,148 @@ prices[7] = 10.00
 console.log(prices)
 ************************************************************************************************************************
 
+Directions:
+James was creating an array with the colors of the rainbow, and he forgot some colors. 
+The standard rainbow colors are usually listed in this order:
+
+var rainbow = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple"];
+but James had this:
+
+var rainbow = ["Red", "Orange", "Blackberry", "Blue"];
+
+/*
+ * Programming Quiz: Colors of the Rainbow (6-4)
+ *
+ * Use only the splice() method to modify the rainbow variable:
+ *  - remove "Blackberry"
+ *  - add "Yellow" and "Green"
+ *  - add "Purple"
+ */
+
+var rainbow = ['Red', 'Orange', 'Blackberry', 'Blue'];
+
+// your code goes here
+rainbow.splice(-2, 1, "Yellow", "Green");
+rainbow.splice(5, 0, "Purple");
+
+console.log(rainbow);
+********************************************************************************
+
+Directions:
+Create a function called hasEnoughPlayers() that takes the team array as an 
+argument and returns true or false depending on if the array has at least seven players.
+
+/*
+ * Programming Quiz: Quidditch Cup (6-5)
+ */
+
+// your code goes here
+function hasEnoughPlayers(arr) {
+    if (arr.length >= 7) {
+        return true;
+    }
+    return false;
+}
+var team = ["Oliver Wood", "Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+console.log(hasEnoughPlayers(team));
+***********************************************************************************
+
+Directions:
+In an earlier exercise, you created a crew array to represent Mal’s crew from the hit show Firefly.
+
+/*
+ * Programming Quiz: Joining the Crew (6-6)
+ */
+
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
+
+var crew = [captain, second, pilot, companion, mercenary, mechanic];
+
+var doctor = "Simon";
+var sister = "River";
+var shepherd = "Book";
+
+// your code goes here
+crew.push(doctor);
+crew.push(sister);
+crew.push(shepherd);
+
+console.log(crew);
+****************************************************************************************
+
+Directions:
+Use the array's forEach() method to loop over the following array and add 100 to each of the values if the value is divisible by 3.
+
+var test = [12, 929, 11, 3, 199, 1000, 7, 1, 24, 37, 4, 19, 300, 3775, 299, 36, 209, 148, 169, 299, 6, 109, 20, 58, 139, 59, 3, 1, 139];
+
+/*
+ * Programming Quiz: Another Type of Loop (6-8)
+ *
+ * Use the existing `test` variable and write a `forEach` loop
+ * that adds 100 to each number that is divisible by 3.
+ *
+ * Things to note:
+ *  - you must use an `if` statement to verify code is divisible by 3
+ *  - you can use `console.log` to verify the `test` variable when you're finished looping
+ */
+
+var test = [12, 929, 11, 3, 199, 1000, 7, 1, 24, 37, 4,
+    19, 300, 3775, 299, 36, 209, 148, 169, 299,
+    6, 109, 20, 58, 139, 59, 3, 1, 139
+];
+
+// Write your code here
+
+ test.forEach(function(value, index) {
+    if(value % 3 === 0 ) {
+        value += 100;
+        test.splice(index, 1,value);
+   }
+});
+ console.log(test);
+*************************************************************************
+Directions:
+Use a nested for loop to take the numbers array below and replace all of the values 
+that are divisible by 2 (even numbers) with the string "even" and all other numbers with the string "odd".
+
+/*
+ * Programming Quiz: Nested Numbers (6-10)
+ *
+ *   - The `numbers` variable is an array of arrays.
+ *   - Use a nested `for` loop to cycle through `numbers`.
+ *   - Convert each even number to the string "even"
+ *   - Convert each odd number to the string "odd"
+ */
+
+var numbers = [
+    [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
+    [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],
+    [67, 56, 45, 553, 44, 55, 5, 428, 452, 3],
+    [12, 31, 55, 445, 79, 44, 674, 224, 4, 21],
+    [4, 2, 3, 52, 13, 51, 44, 1, 67, 5],
+    [5, 65, 4, 5, 5, 6, 5, 43, 23, 4424],
+    [74, 532, 6, 7, 35, 17, 89, 43, 43, 66],
+    [53, 6, 89, 10, 23, 52, 111, 44, 109, 80],
+    [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
+    [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
+];
+
+// your code goes here
+for (var row = 0; row < numbers.length; row++) {
+  
+  for(var column = 0; column < numbers[row].length; column++) {
+    if (numbers[row][column] % 2 === 0) {
+      numbers[row][column] = "even";//changes to even divisible by 2
+    }else {
+      numbers[row][column] = "odd"; //changes to odd not divisible by 2
+    }
+  }
+}
+
+console.log(numbers); 
+
